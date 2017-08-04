@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var fs = require('fs'),
+    ini = require('ini'),
+    winston = require('winston'),
+    togs = require('../lib/togs'),
+    parseArgs = require('minimist');
+
+// parse command line
+var argv = parseArgs(process.argv, { "default": {"f": "./conf/togs.conf"} });
+
+// usage info
+if (argv.h || argv.help) {
+    console.log( [
+       'Usage:', 
+       '     $ togs [options]',
+       '',
+       'Options:',
+       '    -f                   Path to config file [conf/togs.conf]',
+       ''].join('\n'));
+    process.exit();
+};
+
+// parse configuration file, build interface list
+
+// create server, listen
+
+
+
+
+
