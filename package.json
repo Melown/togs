@@ -1,0 +1,41 @@
+{
+  "name": "togs",
+  "version": "0.1.0",
+  "description": "Trivial OGR-based geocoding server with Nominatim-like inteface",
+  "main": "lib/togs-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melown/togs.git"
+  },
+  "keywords": [
+    "shapefile",
+    "gdal",
+    "ogr",
+    "geocoder",
+    "nominatim"
+  ],
+  "author": {
+    "name": "Ondrej Prochazka",
+    "email": "ondrej.prochazka@melown.com>"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "conf"
+  ],
+  "bin": "./bin/togs.js",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/melown/togs/issues"
+  },
+  "homepage": "https://github.com/melown/togs#readme",
+  "dependencies": {
+    "elasticlunr": "^0.9.5",
+    "fs": "0.0.1-security",
+    "ini": "^1.3.4",
+    "ogr2ogr": "^1.0.1"
+  }
+}
