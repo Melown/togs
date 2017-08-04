@@ -43,13 +43,13 @@ try {
    process.exit(-1);
 }
 
-if (!config.interface) config.interface = {};
+if (!config["interface"]) config["interface"] = {};
 if (!config.control) config.control = {};
 if (!config.control.port) { config.control.port = 8100; }
 
 
 // create server, listen
-var server = togs.createServer(config.interface || {});
+var server = togs.createServer(config["interface"]);
 server.listen(config.control.port);
 
 // log exit
