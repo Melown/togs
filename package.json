@@ -1,6 +1,6 @@
 {
   "name": "togs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Trivial OGR-based geocoding server with Nominatim-like inteface",
   "main": "lib/togs.js",
   "scripts": {
