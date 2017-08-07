@@ -21,12 +21,7 @@
     "name": "Ondrej Prochazka",
     "email": "info@citationtech.net"
   },
-  "files": [
-    "bin",
-    "lib",
-    "conf"
-  ],
-  "bin": "./bin/togs.js",
+  "bin": "./bin/togs",
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/melown/togs/issues"
