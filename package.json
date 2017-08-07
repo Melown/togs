@@ -1,13 +1,14 @@
 {
   "name": "togs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Trivial OGR-based geocoding server with Nominatim-like inteface",
   "main": "lib/togs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
-  "engines" : { "node" : ">=8.2.1" },
+  "engines": {
+    "node": ">=8.2.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/melown/togs.git"
