@@ -1,14 +1,14 @@
-togs: simple feature based geocoder
+togs: a simple feature based geocoder
 ===================================
 
 The name *togs* stands for *trivial OGR-based geocoding server*, and togs is
-just that.  It takes a number of ..  _OGR readable feature files:
-http://www.gdal.org/ogr_formats.html (ESRI shapefiles, GeoJSONs, etc.) and
-turns them into .._ Nominatim:
-http://wiki.openstreetmap.org/wiki/Nominatim -like searchable intefaces.
+just that.  It takes a number of `OGR readable feature files
+<http://www.gdal.org/ogr_formats.html>`_ (ESRI shapefiles, GeoJSONs, etc.)
+and turns them into `Nominatim
+<http://wiki.openstreetmap.org/wiki/Nominatim>`_ -like searchable intefaces.
 
 Togs has been built to provide search functionality for planetary maps built
-with ..  _VTS 3D geospatial software stack: https://melown.com/products/vts
+with `VTS 3D geospatial software stack <https://melown.com/products/vts>`_
 atop of IAU planetary nomenclature files but it may be readily used with
 other libraries and tools.
 
@@ -16,12 +16,11 @@ other libraries and tools.
 Installation and configuration
 ------------------------------
 
-To install locally, do 
+To install locally, do::
 
+	$ npm install togs
 
-``$ npm install togs``
-
-Now edit the togs configuration file at `$(npm root)/togs/conf/togs.conf` to
+Now edit the togs configuration file at ``$(npm root)/togs/conf/togs.conf`` to
 include definition of your geocoding interfaces. 
 
 Togs comes with an example dataset, a GeoJSON containing a list of power plants in the
@@ -46,7 +45,7 @@ state of Washington. The corresponding interface is configured as follows::
 
 
 The most important parts of this configuration are the path to the datset
-(relative to `$(npm root)/togs`), the property considered to be feature ID
+(relative to ``$(npm root)/togs``), the property considered to be feature ID
 (idProperty) and the template for display name. In all templates, property
 names enclosed in braces are expanded to their corresponding values when
 geocoder response is formed.
@@ -63,6 +62,7 @@ You can start the server as follows::
 Pointing your browser to 
 
 ::
+
 	http://<yourserver:8100>/powerplants-wa?q=wind&format=json&limit=1
 
 will give you the following output::
@@ -99,10 +99,10 @@ Limitations
 -----------
 
 Nominatim geocoding interface is OSM specific. Togs input files are not
-OSM, thus togs can only mimic Nominatim output format. `place_id`,
-`osm_type` and `osm_id` are all set to null in togs output.
+OSM, thus togs can only mimic Nominatim output format: ``place_id``,
+``osm_type`` and ``osm_id`` are all set to null in togs output.
 
-Togs relies on ..  _elasticlunr: http://elasticlunr.com/  for in-memory
+Togs relies on `elasticlunr <http://elasticlunr.com/>`_  for in-memory
 indexing and stores every dataset in memory in its entirety.  It won't scale
 to very large datasets.
 
@@ -114,6 +114,7 @@ Development
 -----------
 
 ::
+
     $ git clone https://github.com/melown/togs.git
     $ npm install
     $ node bin/togs
