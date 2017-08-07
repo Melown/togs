@@ -3,14 +3,15 @@ togs: a simple feature based geocoder
 
 The name *togs* stands for *trivial OGR-based geocoding server*, and togs is
 just that.  It takes a number of `OGR readable feature files
-<http://www.gdal.org/ogr_formats.html>`_ (ESRI shapefiles, GeoJSONs, etc.)
-and turns them into `Nominatim
-<http://wiki.openstreetmap.org/wiki/Nominatim>`_ -like searchable intefaces.
+<http://www.gdal.org/ogr_formats.html target=_blank>`_ (ESRI shapefiles,
+GeoJSONs, etc.) and turns them into `Nominatim
+<http://wiki.openstreetmap.org/wiki/Nominatim target=_blank>`_ -like
+searchable intefaces.
 
 Togs has been built to provide search functionality for planetary maps built
-with `VTS 3D geospatial software stack <https://melown.com/products/vts>`_
-atop of IAU planetary nomenclature files but it may be readily used with
-other libraries and tools.
+with `VTS 3D geospatial software stack <https://melown.com/products/vts
+target=_blank>`_ atop of IAU planetary nomenclature files but it may be
+readily used with other libraries and tools.
 
 
 Installation and configuration
@@ -44,11 +45,11 @@ state of Washington. The corresponding interface is configured as follows::
 	addressState = {UTILITY_NA}
 
 
-The most important parts of this configuration are the path to the datset
+The most important parts of this configuration are the path to the dataset
 (relative to ``$(npm root)/togs``), the property considered to be feature ID
-(idProperty) and the template for display name. In all templates, property
-names enclosed in braces are expanded to their corresponding values when
-geocoder response is formed.
+(``idProperty``) and the template for display name (``displayName``).  In
+all templates, property names enclosed in braces are expanded to their
+corresponding values when geocoder response is formed.
 
 
 Usage
@@ -102,9 +103,9 @@ Nominatim geocoding interface is OSM specific. Togs input files are not
 OSM, thus togs can only mimic Nominatim output format: ``place_id``,
 ``osm_type`` and ``osm_id`` are all set to null in togs output.
 
-Togs relies on `elasticlunr <http://elasticlunr.com/>`_  for in-memory
-indexing and stores every dataset in memory in its entirety.  It won't scale
-to very large datasets.
+Togs relies on `elasticlunr <http://elasticlunr.com/ target=_blank>`_  for
+in-memory indexing and stores every dataset in memory in its entirety.  It
+won't scale to very large datasets.
 
 Currently, JSON is the only supported output format, though adding support
 for XML is probably trivial. 
