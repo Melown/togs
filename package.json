@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
+  "engines" : { "node" : ">=8.2.1" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/melown/togs.git"
