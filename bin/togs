@@ -6,11 +6,13 @@ var fs = require('fs'),
     ini = require('ini'),
     log = require('winston'),
     togs = require('../lib/togs'),
-    parseArgs = require('minimist');
+    parseArgs = require('minimist'),
+    pr = require('package-root');
 
 
 // parse command line
-var argv = parseArgs(process.argv, { "default": {"f": "./conf/togs.conf"} });
+var argv = parseArgs(process.argv, { 
+    "default": {"f": pr.join("conf/togs.conf")}});
 
 // usage info
 if (argv.h || argv.help) {

@@ -6,7 +6,7 @@ just that.  It takes a number of [OGR readable feature
 files](http://www.gdal.org/ogr_formats.html target=_blank>) (ESRI
 shapefiles, GeoJSONs, etc.) and turns them into
 [Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim
-target=_blank>)-like searchable intefaces.
+target=_blank) -like searchable intefaces.
 
 Togs has been built to provide search functionality for planetary maps built
 with [VTS 3D geospatial software stack](https://melown.com/products/vts
@@ -61,7 +61,7 @@ Usage
 You can start the server as follows:
 
 ```
-	$ togs -f $(npm root)/conf/togs.conf
+	$ $(npm root)/.bin/togs
 ```
 
 Pointing your browser to 
