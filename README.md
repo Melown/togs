@@ -3,15 +3,14 @@ togs: a simple feature based geocoder
 
 The name *togs* stands for *trivial OGR-based geocoding server*, and togs is
 just that.  It takes a number of [OGR readable feature
-files](http://www.gdal.org/ogr_formats.html target=_blank>) (ESRI
+files](http://www.gdal.org/ogr_formats.html) (ESRI
 shapefiles, GeoJSONs, etc.) and turns them into
-[Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim
-target=_blank) -like searchable intefaces.
+[Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim) -like searchable intefaces.
 
 Togs has been built to provide search functionality for planetary maps built
-with [VTS 3D geospatial software stack](https://melown.com/products/vts
-target=_blank) atop of IAU planetary nomenclature files but it may be
-readily used with other libraries and tools.
+with [VTS 3D geospatial software stack](https://melown.com/products/vts) atop 
+of IAU planetary nomenclature files but it may be readily used with other libraries
+and tools.
 
 
 Installation and configuration
@@ -108,7 +107,7 @@ Nominatim geocoding interface is OSM specific. Togs input files are not
 OSM, thus togs can only mimic Nominatim output format: ``place_id``,
 ``osm_type`` and ``osm_id`` are all set to null in togs output.
 
-Togs relies on [elasticlunr](http://elasticlunr.com/ target=_blank)  for
+Togs relies on [elasticlunr](http://elasticlunr.com/)  for
 in-memory indexing and stores every dataset in memory in its entirety.  It
 won't scale to very large datasets.
 
