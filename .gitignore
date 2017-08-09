@@ -2,6 +2,7 @@
 DEADJOE
 datasets/*
 !datasets/GIS_Layer__PowerPlants_WA.geojson
+conf/togs.conf
 
 # Logs
 logs

@@ -4,7 +4,8 @@
   "description": "Trivial OGR-based geocoding server with Nominatim-like inteface",
   "main": "lib/togs.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "if [ ! -f conf/togs.conf]; then cp conf/togs.conf.dist conf/togs.conf; fi"
   },
   "engines": {
     "node": ">=8.2.1"
@@ -38,6 +39,7 @@
     "minimist": "^1.2.0",
     "ogr2ogr": "^1.0.1",
     "package-root": "^0.9.2",
+    "path-is-absolute": "^1.0.1",
     "querystring": "^0.2.0",
     "url": "^0.11.0",
     "winston": "^2.3.1"
