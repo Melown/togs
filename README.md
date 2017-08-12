@@ -20,6 +20,8 @@ To install locally, do:
 
 ```
 	$ npm install togs
+	$ cd togs
+	$ npm i
 ```
 
 Now edit the togs configuration file at `$(npm root)/togs/conf/togs.conf` to
